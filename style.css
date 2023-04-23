@@ -349,3 +349,10 @@ h1{
     -webkit-text-stroke: 1px black; 
     margin-top: 5%;
 }
+.reg{
+		color: #3B1A71;
+	font: 15px 'Press Start 2P';
+	padding: 3%;
+	border: unset;
+	margin: 3%;
+}
