@@ -14,6 +14,9 @@ $desc = mysqli_query($conn, "SELECT description FROM `games` WHERE name = ". $_G
 $way = mysqli_query($conn, "SELECT way FROM `games` WHERE name = ". $_GET['name']);
 $type = mysqli_query($conn, "SELECT type FROM `games` WHERE name = ". $_GET['name']);
 $name = mysqli_query($conn, "SELECT name FROM `games` WHERE name = ". $_GET['name']);
+if($_COOKIE["login"] == NULL){
+	header("Location: reg.php");
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,11 +27,11 @@ $name = mysqli_query($conn, "SELECT name FROM `games` WHERE name = ". $_GET['nam
 	<link rel="stylesheet" href="../style.css">
 	<link href="https://fonts.cdnfonts.com/css/quantico" rel="stylesheet">
 </head>
-<body>
+<body onload="document.getElementsByName ('anchor') [0].scrollIntoView (1)">
 	<header class="headerr">
 		<div style="display: flex;">
 			<img src="Images/BackgroundHeader.png" class="headerBackground" style="pointer-events: none; ">
-			<a href="">	<img src="../Images/Logo.png" class="logo" style="pointer-events: none;">
+			<a href="">	<img src="Images/Logo.png" class="logo" style="pointer-events: none;" name="anchor">
 			</a>
 			<div class="navigText"> <p align="center"><a href="index.php">Главная</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="news.php">Новости</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="about.php">О нас</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="ЧАВО.php">ЧАВО</a>&nbsp;&nbsp;</p> </div>
 		</div>

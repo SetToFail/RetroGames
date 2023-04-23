@@ -10,6 +10,9 @@ if (!$conn) {
 }
 $page = $_GET['page'];
 $count = 3;	
+if($_COOKIE["login"] == NULL){
+	header("Location: reg.php");
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,13 +23,13 @@ $count = 3;
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.cdnfonts.com/css/quantico" rel="stylesheet">
 </head>
-<body>
+<body onload="document.getElementsByName ('anchor') [0].scrollIntoView (1)">
 	<header class="headerr">
 		<div style="display: flex;">
 			<img src="Images/BackgroundHeader.png" class="headerBackground">
 			<a href="index.php">
 				<div>	
-					<img src="Images/Logo.png" class="logo" style="pointer-events: none;">
+					<img src="Images/Logo.png" class="logo" style="pointer-events: none;" name="anchor">
 				</div>
 			</a>
 			<div class="navigText"> <p><a href="index.php">Главная</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="news.php">Новости</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="about.php">О нас</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="ЧАВО.php">ЧАВО</a>&nbsp;&nbsp;|&nbsp;&nbsp;</p> </div>
