@@ -87,7 +87,7 @@ mysqli_query($conn, "SET NAMES utf8");
 					<label>Пароль</label>
 					<input type="password" name="pass" placeholder="Введите пароль">
 					<input type="password" name="repPass" placeholder="Подтвердите пароль">
-					<input type="submit" name="reg" value="Зарегистрироваться">
+					<input type="submit" name="reg" value="Зарегистрироваться" class="reg">
 					<?php 
 					if (isset($_POST['reg'])){
 						$login = $_POST['login'];
